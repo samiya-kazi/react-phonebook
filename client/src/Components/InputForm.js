@@ -18,6 +18,18 @@ function InputFrom (props) {
         props.setList(prevList => [...prevList, response])
       })
       .catch(err => console.log(err));
+
+    clearForm(event);
+  }
+
+
+  function clearForm (event) {
+    event.target.name.value = "";
+    event.target.phone.value = "";
+    event.target.email.value = "";
+    event.target.birthday.value = "";
+    event.target.gender.value = "";
+    event.target.type.value = "";
   }
 
   return (
